@@ -8,3 +8,10 @@ for char in sentence:
         print(dict[char], "this", "=> ", char)
     else:
         print(char, ": that does not exist")
+
+obj = {0: "hello", 1: "there"}
+
+for i in range(len(obj)):
+    print(obj[i])
+
+print(len(obj))

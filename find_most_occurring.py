@@ -1,18 +1,25 @@
 sentence = "This is a common interview question"
 
 
-def get_most_occurring_char(string):
+def sort_char_by_occurence(string):
     clear_whitespaces = string.replace(" ", "").lower()
     print(clear_whitespaces)
-    sort_character = {}
+    sorted_character = {}
     for char in clear_whitespaces:
-        if char in sort_character:
-            sort_character[char] = sort_character[char] + char
-            print(f"character: {char} exist in sort_charcter")
+        if char in sorted_character:
+            sorted_character[char] = sorted_character[char] + char
         else:
-            sort_character[char] = char
+            sorted_character[char] = char
 
-    return sort_character
+    return sorted_character
 
 
-print(get_most_occurring_char(sentence))
+def get_most_occurring_char():
+    sorted_char = sort_char_by_occurence(sentence)
+    for item in sorted_char:
+        print(item, "> length: ", len(sorted_char[item]))
+
+    return sorted_char
+
+
+print(get_most_occurring_char())
