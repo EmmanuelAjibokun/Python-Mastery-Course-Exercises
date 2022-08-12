@@ -16,8 +16,12 @@ def sort_char_by_occurence(string):
 
 def get_most_occurring_char():
     sorted_char = sort_char_by_occurence(sentence)
+    frequency = []
     for item in sorted_char:
         print(item, "> length: ", len(sorted_char[item]))
+        frequency.append(sorted_char[item])
+
+    print(frequency)
 
     return sorted_char
 
