@@ -30,6 +30,8 @@ if users_permission.lower() == "yes":
 
 
 class Person():
+    account = 2000000
+
     def __init__(self, name, job):
         self.name = name
         self.job = job
@@ -38,9 +40,30 @@ class Person():
         return msg
 
 
+class Voter(Person):
+    def __init__(self, name, area):
+        self.name = name
+        self.area = area
+
+    def Vote(self, candidate):
+        return f"I voted {candidate}"
+
+
 person1 = Person("John", "Developer")
 person2 = Person("Manny", "Software Engineer")
 person3 = Person("Daniel", "Graphics designer")
 person4 = Person("Jesse", "Data Analyst")
+
+# voter = Voter("Emmanuel", "Citizen")
+# print(voter.Speak("I can speak"))
+
 print(person1.Speak("I can speak"))
-print(person1.name)
+print(person1.name, "has ", person1.account)
+print(person2.name, "has ", person2.account)
+print(person3.name, "has ", person3.account)
+print(person4.name, "has ", person4.account)
+
+voter = Voter("Manny", "Akute")
+print(voter.Vote("Peter Obi"))
+print(voter.Speak("This voter can speak"))
+print(person1.Vote("Peter Obi"))
