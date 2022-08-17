@@ -39,4 +39,8 @@ class Person():
 
 
 person1 = Person("John", "Developer")
+person2 = Person("Manny", "Software Engineer")
+person3 = Person("Daniel", "Graphics designer")
+person4 = Person("Jesse", "Data Analyst")
 print(person1.Speak("I can speak"))
+print(person1.name)
